@@ -1,0 +1,61 @@
+<section id="writing" class="py-24 bg-white" aria-label="Writing and notes">
+  <div class="max-w-6xl mx-auto px-6">
+
+    <!-- Section heading -->
+    <div class="text-center mb-16" appScrollReveal>
+      <p class="text-indigo-600 text-sm font-semibold uppercase tracking-widest mb-3">Writing</p>
+      <h2 class="text-4xl font-bold text-slate-900 tracking-tight">Notes & thoughts</h2>
+      <p class="text-slate-500 mt-4 max-w-xl mx-auto leading-relaxed">
+        Occasionally I write about design, development, and life. Here are some recent pieces.
+      </p>
+    </div>
+
+    <!-- Writing entries -->
+    <div class="max-w-3xl mx-auto flex flex-col gap-6">
+      @for (entry of writing; track entry.id) {
+        <article
+          class="group bg-white border border-slate-200 rounded-2xl p-6 hover:border-indigo-200 hover:shadow-md transition-all duration-300"
+          appScrollReveal
+        >
+          <div class="flex flex-wrap items-center gap-3 mb-3">
+            <!-- Category badge -->
+            <span class="px-2.5 py-0.5 bg-indigo-50 text-indigo-600 rounded-full text-xs font-semibold ring-1 ring-inset ring-indigo-100">
+              {{ entry.category }}
+            </span>
+            <!-- Date -->
+            <time
+              class="text-xs text-slate-400 font-medium"
+              [attr.datetime]="entry.date"
+            >
+              {{ entry.date }}
+            </time>
+            <!-- Read time -->
+            <span class="text-xs text-slate-400">· {{ entry.readTime }}</span>
+          </div>
+
+          <!-- Title -->
+          <h3 class="text-xl font-semibold text-slate-900 mb-2 group-hover:text-indigo-600 transition-colors">
+            {{ entry.title }}
+          </h3>
+
+          <!-- Excerpt -->
+          <p class="text-slate-500 text-sm leading-relaxed mb-4">
+            {{ entry.excerpt }}
+          </p>
+
+          <!-- Read more link (placeholder) -->
+          <span
+            class="inline-flex items-center gap-1 text-sm font-semibold text-indigo-600 group-hover:gap-2 transition-all"
+            aria-hidden="true"
+          >
+            Read more
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+            </svg>
+          </span>
+        </article>
+      }
+    </div>
+
+  </div>
+</section>

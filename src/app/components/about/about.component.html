@@ -1,0 +1,53 @@
+<section id="about" class="py-24 bg-white" aria-label="About me">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="grid md:grid-cols-2 gap-12 lg:gap-20 items-center">
+      <!-- Text content -->
+      <div appScrollReveal>
+        <p class="text-indigo-600 text-sm font-semibold uppercase tracking-widest mb-3">About Me</p>
+        <h2 class="text-4xl font-bold text-slate-900 tracking-tight leading-tight mb-8">
+          A developer, designer,<br class="hidden sm:block" />and lifelong learner.
+        </h2>
+
+        @for (paragraph of bio; track $index) {
+          <p class="text-slate-600 text-lg leading-relaxed mb-5">{{ paragraph }}</p>
+        }
+
+        <!-- Highlight stats -->
+        <div class="grid grid-cols-3 gap-6 mt-10 pt-8 border-t border-slate-100">
+          @for (item of highlights; track item.label) {
+            <div class="text-center">
+              <p class="text-3xl font-bold text-indigo-600">{{ item.value }}</p>
+              <p class="text-xs text-slate-500 mt-1.5 leading-snug">{{ item.label }}</p>
+            </div>
+          }
+        </div>
+      </div>
+
+      <!-- Visual: profile placeholder -->
+      <div class="flex justify-center md:justify-end" appScrollReveal="reveal-delay-1">
+        <div class="relative">
+          <!-- Profile circle -->
+          <div
+            class="w-64 h-64 md:w-80 md:h-80 rounded-3xl flex items-center justify-center shadow-2xl"
+            style="background: linear-gradient(135deg, #eef2ff 0%, #ede9fe 100%)"
+          >
+            <span class="text-7xl md:text-8xl font-bold text-indigo-300 select-none" aria-hidden="true">
+              {{ initials }}
+            </span>
+          </div>
+          <!-- Decorative accent shapes -->
+          <div
+            class="absolute -top-5 -right-5 w-24 h-24 rounded-2xl -z-10 border-2 border-indigo-100"
+            style="background: #eef2ff"
+            aria-hidden="true"
+          ></div>
+          <div
+            class="absolute -bottom-5 -left-5 w-16 h-16 rounded-xl -z-10 border-2 border-violet-100"
+            style="background: #f5f3ff"
+            aria-hidden="true"
+          ></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

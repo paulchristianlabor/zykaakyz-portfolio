@@ -1,0 +1,73 @@
+<header class="fixed top-0 inset-x-0 z-40 transition-all duration-300" [class.nav-scrolled]="isScrolled()">
+  <nav
+    class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between"
+    role="navigation"
+    aria-label="Main navigation"
+  >
+    <!-- Logo / site name -->
+    <a
+      href="#home"
+      class="text-lg font-bold text-slate-900 hover:text-indigo-600 transition-colors focus-visible:rounded"
+      aria-label="Back to top of page"
+    >
+      {{ siteName }}
+    </a>
+
+    <!-- Desktop navigation links -->
+    <ul class="hidden md:flex items-center gap-8 list-none m-0 p-0" role="list">
+      @for (link of navLinks; track link.href) {
+        <li>
+          <a [href]="link.href" class="text-sm font-medium text-slate-600 hover:text-indigo-600 transition-colors py-1">
+            {{ link.label }}
+          </a>
+        </li>
+      }
+    </ul>
+
+    <!-- Mobile hamburger button -->
+    <button
+      type="button"
+      class="md:hidden p-2 rounded-lg text-slate-600 hover:text-slate-900 hover:bg-slate-100 transition-colors"
+      [attr.aria-expanded]="isMenuOpen()"
+      aria-controls="mobile-menu"
+      [attr.aria-label]="isMenuOpen() ? 'Close navigation menu' : 'Open navigation menu'"
+      (click)="toggleMenu()"
+    >
+      @if (isMenuOpen()) {
+        <!-- X icon -->
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      } @else {
+        <!-- Hamburger icon -->
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      }
+    </button>
+  </nav>
+
+  <!-- Mobile menu panel -->
+  @if (isMenuOpen()) {
+    <div
+      id="mobile-menu"
+      class="md:hidden bg-white/95 backdrop-blur-md border-t border-slate-100 shadow-sm"
+      role="region"
+      aria-label="Mobile navigation"
+    >
+      <ul class="max-w-6xl mx-auto px-6 py-4 flex flex-col gap-1 list-none m-0" role="list">
+        @for (link of navLinks; track link.href) {
+          <li>
+            <a
+              [href]="link.href"
+              class="block py-3 px-3 rounded-lg text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50 transition-colors"
+              (click)="closeMenu()"
+            >
+              {{ link.label }}
+            </a>
+          </li>
+        }
+      </ul>
+    </div>
+  }
+</header>

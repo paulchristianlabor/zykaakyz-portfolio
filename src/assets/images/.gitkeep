@@ -1,0 +1,4 @@
+# Place your image assets here.
+# Supported formats: .webp, .png, .jpg, .svg
+# Reference images in templates as: /assets/images/your-image.webp
+# Do not commit large binary files without considering file size impact.
