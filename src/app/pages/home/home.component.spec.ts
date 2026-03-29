@@ -16,67 +16,25 @@ describe('HomeComponent', () => {
     expect(fixture.componentInstance).toBeTruthy();
   });
 
-  it('should render the navbar', () => {
+  it('should render the site heading', () => {
     const fixture = TestBed.createComponent(HomeComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('app-navbar')).toBeTruthy();
+    expect(compiled.querySelector('h1')?.textContent).toContain('Zyka Akyz');
   });
 
-  it('should render the hero section', () => {
+  it('should render featured work section', () => {
     const fixture = TestBed.createComponent(HomeComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('app-hero')).toBeTruthy();
+    expect(compiled.querySelector('#work')).toBeTruthy();
   });
 
-  it('should render the about section', () => {
+  it('should render contact section', () => {
     const fixture = TestBed.createComponent(HomeComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('app-about')).toBeTruthy();
-  });
-
-  it('should render the interests section', () => {
-    const fixture = TestBed.createComponent(HomeComponent);
-    fixture.detectChanges();
-    const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('app-interests')).toBeTruthy();
-  });
-
-  it('should render the projects section', () => {
-    const fixture = TestBed.createComponent(HomeComponent);
-    fixture.detectChanges();
-    const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('app-projects')).toBeTruthy();
-  });
-
-  it('should render the gallery section', () => {
-    const fixture = TestBed.createComponent(HomeComponent);
-    fixture.detectChanges();
-    const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('app-gallery')).toBeTruthy();
-  });
-
-  it('should render the writing section', () => {
-    const fixture = TestBed.createComponent(HomeComponent);
-    fixture.detectChanges();
-    const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('app-writing')).toBeTruthy();
-  });
-
-  it('should render the contact section', () => {
-    const fixture = TestBed.createComponent(HomeComponent);
-    fixture.detectChanges();
-    const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('app-contact')).toBeTruthy();
-  });
-
-  it('should render the footer', () => {
-    const fixture = TestBed.createComponent(HomeComponent);
-    fixture.detectChanges();
-    const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('app-footer')).toBeTruthy();
+    expect(compiled.querySelector('#contact')).toBeTruthy();
   });
 
   it('should have a main element with id main-content', () => {

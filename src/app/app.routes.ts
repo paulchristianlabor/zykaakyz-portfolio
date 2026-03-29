@@ -5,7 +5,7 @@ export const routes: Routes = [
   {
     path: '',
     component: HomeComponent,
-    title: 'Alex Rivera — Developer · Designer · Creator',
+    title: 'Zyka Akyz - Creator',
   },
   {
     path: '**',

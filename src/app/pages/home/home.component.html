@@ -1,13 +1,94 @@
-<app-navbar />
+<main class="site" id="main-content">
+  <nav class="navbar" aria-label="Primary">
+    <a class="brand" href="#main-content" aria-label="Zyka Akyz home">
+      <span class="brand-name">Zyka Akyz</span>
+      <span class="brand-sub">Creator</span>
+    </a>
 
-<main id="main-content" tabindex="-1">
-  <app-hero />
-  <app-about />
-  <app-interests />
-  <app-projects />
-  <app-gallery />
-  <app-writing />
-  <app-contact />
+    <div class="nav-links">
+      <a href="#work">Work</a>
+      <a href="#process">Process</a>
+      <a href="#notes">Notes</a>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="hero-copy">
+      <p class="eyebrow">Portfolio Set 02</p>
+      <h1>Zyka Akyz</h1>
+      <p class="lead">A creator focused on clean visuals, narrative direction, and digital campaign identity.</p>
+      <a class="btn btn-primary" href="#work">Explore Selected Work</a>
+    </div>
+
+    <figure class="hero-media">
+      <img class="hero-photo" src="images/creator-photo.jpg" alt="Portrait photo used in Zyka Akyz creator portfolio" />
+      <figcaption>Creator Portfolio</figcaption>
+    </figure>
+  </header>
+
+  <section class="section" id="work">
+    <div class="section-head">
+      <h2>Featured Work</h2>
+      <p>Three recent directions across story, brand, and web.</p>
+    </div>
+
+    <div class="work-grid">
+      <article class="card">
+        <p class="tag">01 Brand Story</p>
+        <h3>Neon Chronicle</h3>
+        <p>Editorial-inspired campaign visuals with short-form narrative releases.</p>
+      </article>
+
+      <article class="card">
+        <p class="tag">02 Direction</p>
+        <h3>Urban Pulse</h3>
+        <p>Unified concept board, teaser sequence, and launch identity toolkit.</p>
+      </article>
+
+      <article class="card">
+        <p class="tag">03 Experience</p>
+        <h3>Afterglow Studio</h3>
+        <p>A minimal digital showcase balancing atmosphere and usability.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="section" id="process">
+    <div class="section-head">
+      <h2>Creative Process</h2>
+      <p>Simple workflow from concept to final output.</p>
+    </div>
+
+    <ul class="process-list" aria-label="Creative process steps">
+      <li>
+        <h3>Discover</h3>
+        <p>Research references, audience, and visual direction.</p>
+      </li>
+      <li>
+        <h3>Develop</h3>
+        <p>Build concepts, design frames, and narrative structure.</p>
+      </li>
+      <li>
+        <h3>Deliver</h3>
+        <p>Refine, test, and release cohesive final assets.</p>
+      </li>
+    </ul>
+  </section>
+
+  <section class="section" id="notes">
+    <div class="section-head">
+      <h2>Notes</h2>
+      <p>Design principles behind Zyka Akyz projects.</p>
+    </div>
+
+    <div class="notes-grid">
+      <p>Keep forms simple and messages clear.</p>
+      <p>Focus on emotion, then polish function.</p>
+      <p>Build visual consistency across all outputs.</p>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <p>Design and Built by Zyka Akyz</p>
+  </footer>
 </main>
-
-<app-footer />
