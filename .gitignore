@@ -1,7 +1,5 @@
 # See https://docs.github.com/get-started/getting-started-with-git/ignoring-files for more about ignoring files.
 
-# ⚠️ NEVER add personal machine paths (/Users/..., /home/..., C:/Users/...) anywhere in this project.
-
 # Compiled output
 /dist
 /tmp
