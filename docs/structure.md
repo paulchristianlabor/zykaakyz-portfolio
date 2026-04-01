@@ -9,7 +9,7 @@ zykaakyz-portfolio/
 ├── docs/                 Project documentation
 ├── dist/                 Build output (git-ignored)
 ├── angular.json          Angular CLI configuration
-├── package.json          Dependencies and npm scripts
+├── package.json          Dependencies and pnpm scripts
 ├── tsconfig.json         TypeScript root configuration
 ├── tsconfig.app.json     TypeScript configuration for the app build
 ├── tsconfig.spec.json    TypeScript configuration for tests
@@ -72,19 +72,25 @@ src/
 ## Key Design Decisions
 
 ### Data-Driven Content
+
 All placeholder content is centralised in `src/data/content.ts`. Components import this data rather than hardcoding strings. This makes the site easy to personalise without touching component code.
 
 ### Standalone Components
+
 Every component is standalone (Angular 19+ default). No NgModules are used.
 
 ### No Backend
+
 The site is entirely static. The contact form demonstrates validation UI only; actual email sending requires integrating a service like Netlify Forms or EmailJS.
 
 ### SSG (Static Site Generation)
+
 The build uses Angular's `outputMode: "static"` which prerendering the home route to a static `index.html` at build time. This improves initial page load and SEO without any server infrastructure.
 
 ### Tailwind CSS v4
+
 Tailwind v4 uses a CSS-first configuration model. The theme is extended via CSS variables in `src/styles.css`. Component styles use Tailwind utility classes directly in templates.
 
 ### Scroll Reveal Animations
+
 The `ScrollRevealDirective` attaches an `IntersectionObserver` to any element using `appScrollReveal`. Elements animate in (fade + slide up) when they enter the viewport. The directive degrades gracefully in environments where `IntersectionObserver` is unavailable (e.g. test runners).

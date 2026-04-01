@@ -10,7 +10,7 @@ Tests use the Angular `TestBed` utility for component setup and standard Vitest 
 
 ```
 # Run all tests once
-npm test
+pnpm test
 
 # Run with verbose output
 npx ng test --watch=false --reporters=verbose
@@ -33,16 +33,16 @@ src/app/pages/home/home.component.spec.ts
 
 ## What Is Covered
 
-| Area | Tests |
-|------|-------|
-| Root App component | Creates, renders router-outlet |
-| Navbar | Creates, renders links, toggles mobile menu, aria attributes |
-| Hero | Creates, renders name/role, CTA links, h1 heading, section ID |
-| About | Creates, renders section ID, heading, initials, highlights |
-| Interests | Creates, renders section ID, correct number of cards, tags |
-| Projects | Creates, renders section ID, project titles, safe external links |
-| Contact | Creates, renders form, input fields, labels, validation, submission |
-| Home page | Creates, renders all section components, main element |
+| Area               | Tests                                                               |
+| ------------------ | ------------------------------------------------------------------- |
+| Root App component | Creates, renders router-outlet                                      |
+| Navbar             | Creates, renders links, toggles mobile menu, aria attributes        |
+| Hero               | Creates, renders name/role, CTA links, h1 heading, section ID       |
+| About              | Creates, renders section ID, heading, initials, highlights          |
+| Interests          | Creates, renders section ID, correct number of cards, tags          |
+| Projects           | Creates, renders section ID, project titles, safe external links    |
+| Contact            | Creates, renders form, input fields, labels, validation, submission |
+| Home page          | Creates, renders all section components, main element               |
 
 **Total: 60 tests across 8 test files**
 

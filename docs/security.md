@@ -16,6 +16,7 @@ This is a client-side only application. There is no backend, no server-side code
 - If you integrate a third-party service (e.g. EmailJS, analytics), use only their **public client-side keys**, and document what you added
 
 If a secret is accidentally committed:
+
 1. Rotate the secret immediately on the service provider
 2. Remove it from the repository history (e.g. git filter-repo)
 3. Do not rely on "deleting the commit" — Git history is public once pushed
@@ -31,6 +32,7 @@ All paths in source code, documentation, and configuration must be **project-rel
 - Forbidden: `/home/yourname/...`
 
 Personal filesystem paths must never appear in:
+
 - Source code or comments
 - Configuration files
 - Markdown documentation
@@ -58,6 +60,7 @@ All external links use `target="_blank" rel="noopener noreferrer"` to prevent:
 The contact form is frontend-only. It validates input client-side using Angular Reactive Forms but does not send data anywhere by default.
 
 If you add a third-party form service:
+
 - Use only official client-side integration methods
 - Do NOT pass email content through a custom backend unless you control and secure it
 - Review the service's privacy policy before collecting user data
@@ -67,9 +70,9 @@ If you add a third-party form service:
 Keep dependencies up to date:
 
 ```
-npm audit          Check for known vulnerabilities
-npm outdated       List packages with available updates
-npm update         Update packages within semver ranges
+pnpm audit         Check for known vulnerabilities
+pnpm outdated      List packages with available updates
+pnpm update        Update packages within semver ranges
 ```
 
 Note: Some audit warnings may appear in devDependencies (ESLint, Angular CLI). These tools are not included in the deployed static site and do not affect end-user security. Review each finding to determine if it is in a runtime or dev-only dependency.
