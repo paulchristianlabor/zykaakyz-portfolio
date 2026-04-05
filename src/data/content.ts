@@ -1,4 +1,12 @@
 import type { SiteContent } from '../app/core/models/portfolio.models';
+import {
+  faCamera,
+  faLaptopCode,
+  faMusic,
+  faMapLocationDot,
+  faBookOpen,
+  faPencil,
+} from '@fortawesome/free-solid-svg-icons';
 
 /**
  * Placeholder site content. Replace these values with your real information.
@@ -34,7 +42,7 @@ export const SITE_CONTENT: SiteContent = {
   interests: [
     {
       id: 'photography',
-      emoji: '📷',
+      icon: faCamera,
       title: 'Photography',
       description:
         'Capturing light, life, and perspective through a lens. Photography grounds me in the present moment.',
@@ -42,7 +50,7 @@ export const SITE_CONTENT: SiteContent = {
     },
     {
       id: 'web-development',
-      emoji: '💻',
+      icon: faLaptopCode,
       title: 'Web Development',
       description:
         'Crafting fast, beautiful, and accessible digital products. Code is both a craft and a creative medium.',
@@ -50,7 +58,7 @@ export const SITE_CONTENT: SiteContent = {
     },
     {
       id: 'music',
-      emoji: '🎵',
+      icon: faMusic,
       title: 'Music',
       description:
         'From classical piano to electronic production, music shapes how I think about rhythm, structure, and flow.',
@@ -58,7 +66,7 @@ export const SITE_CONTENT: SiteContent = {
     },
     {
       id: 'travel',
-      emoji: '🗺️',
+      icon: faMapLocationDot,
       title: 'Travel',
       description:
         'Each place teaches something new. The world is the best classroom, and every trip expands the horizon.',
@@ -66,7 +74,7 @@ export const SITE_CONTENT: SiteContent = {
     },
     {
       id: 'reading',
-      emoji: '📚',
+      icon: faBookOpen,
       title: 'Reading',
       description:
         'Books, essays, and papers keep the mind sharp and curious. A good idea from anywhere can change everything.',
@@ -74,7 +82,7 @@ export const SITE_CONTENT: SiteContent = {
     },
     {
       id: 'design',
-      emoji: '✏️',
+      icon: faPencil,
       title: 'Design',
       description:
         'Making things that are both beautiful and deeply functional. Great design is invisible until you miss it.',

@@ -1,17 +1,21 @@
 import { Component, inject, signal } from '@angular/core';
 import { ReactiveFormsModule, FormBuilder, Validators } from '@angular/forms';
+import { FaIconComponent } from '@fortawesome/angular-fontawesome';
+import { faEnvelope, faLocationDot } from '@fortawesome/free-solid-svg-icons';
 import { ScrollRevealDirective } from '../../shared/directives/scroll-reveal.directive';
 import { SITE_CONTENT } from '../../../data/content';
 import type { ContactInfo } from '../../core/models/portfolio.models';
 
 @Component({
   selector: 'app-contact',
-  imports: [ReactiveFormsModule, ScrollRevealDirective],
+  imports: [ReactiveFormsModule, ScrollRevealDirective, FaIconComponent],
   templateUrl: './contact.component.html',
 })
 export class ContactComponent {
   private readonly fb = inject(FormBuilder);
 
+  readonly faEnvelope = faEnvelope;
+  readonly faLocationDot = faLocationDot;
   readonly contactInfo: ContactInfo = SITE_CONTENT.contact;
 
   readonly form = this.fb.group({

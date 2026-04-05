@@ -1,6 +1,5 @@
 <section id="contact" class="py-24 bg-slate-50" aria-label="Contact">
   <div class="max-w-6xl mx-auto px-6">
-
     <!-- Section heading -->
     <div class="text-center mb-16" appScrollReveal>
       <p class="text-indigo-600 text-sm font-semibold uppercase tracking-widest mb-3">Contact</p>
@@ -11,7 +10,6 @@
     </div>
 
     <div class="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto">
-
       <!-- Contact info column -->
       <div appScrollReveal>
         <h3 class="text-xl font-semibold text-slate-900 mb-6">Get in touch</h3>
@@ -19,10 +17,7 @@
         <!-- Email -->
         <div class="flex items-start gap-4 mb-6">
           <div class="w-10 h-10 rounded-xl bg-indigo-50 flex items-center justify-center flex-shrink-0">
-            <svg class="w-5 h-5 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-                d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-            </svg>
+            <fa-icon [icon]="faEnvelope" class="w-5 h-5 text-indigo-600" aria-hidden="true"></fa-icon>
           </div>
           <div>
             <p class="text-sm font-medium text-slate-700 mb-0.5">Email</p>
@@ -39,11 +34,7 @@
         <!-- Location -->
         <div class="flex items-start gap-4 mb-6">
           <div class="w-10 h-10 rounded-xl bg-indigo-50 flex items-center justify-center flex-shrink-0">
-            <svg class="w-5 h-5 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-                d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-            </svg>
+            <fa-icon [icon]="faLocationDot" class="w-5 h-5 text-indigo-600" aria-hidden="true"></fa-icon>
           </div>
           <div>
             <p class="text-sm font-medium text-slate-700 mb-0.5">Location</p>
@@ -178,7 +169,8 @@
 
           <!-- Note about form processing -->
           <p class="text-xs text-slate-400 -mt-1">
-            Note: This form is for demonstration. To enable sending, connect a form service like Netlify Forms or EmailJS.
+            Note: This form is for demonstration. To enable sending, connect a form service like Netlify Forms or
+            EmailJS.
           </p>
 
           <!-- Submit button -->
@@ -190,7 +182,6 @@
           </button>
         </form>
       </div>
-
     </div>
   </div>
 </section>
