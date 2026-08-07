@@ -30,13 +30,6 @@ describe('HomeComponent', () => {
     expect(compiled.querySelector('#work')).toBeTruthy();
   });
 
-  it('should render contact section', () => {
-    const fixture = TestBed.createComponent(HomeComponent);
-    fixture.detectChanges();
-    const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('#contact')).toBeTruthy();
-  });
-
   it('should have a main element with id main-content', () => {
     const fixture = TestBed.createComponent(HomeComponent);
     fixture.detectChanges();

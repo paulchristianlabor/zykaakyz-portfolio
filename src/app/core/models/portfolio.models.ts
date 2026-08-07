@@ -1,3 +1,5 @@
+import type { IconDefinition } from '@fortawesome/fontawesome-svg-core';
+
 export interface NavLink {
   label: string;
   href: string;
@@ -16,7 +18,7 @@ export interface Highlight {
 
 export interface InterestCard {
   id: string;
-  emoji: string;
+  icon: IconDefinition;
   title: string;
   description: string;
   tags: string[];

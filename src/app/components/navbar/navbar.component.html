@@ -35,14 +35,10 @@
     >
       @if (isMenuOpen()) {
         <!-- X icon -->
-        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-        </svg>
+        <fa-icon [icon]="faXmark" class="w-5 h-5" aria-hidden="true"></fa-icon>
       } @else {
         <!-- Hamburger icon -->
-        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-        </svg>
+        <fa-icon [icon]="faBars" class="w-5 h-5" aria-hidden="true"></fa-icon>
       }
     </button>
   </nav>
